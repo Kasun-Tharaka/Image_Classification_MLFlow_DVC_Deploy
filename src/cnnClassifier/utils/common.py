@@ -10,16 +10,6 @@ from pathlib import Path
 from typing import Any
 import base64
 
-"""
-use of ensure_annotations: if we make a function to multiply two in numbers with user inputs, 
-                            and to get int output. what is if user gives one string value,
-                            output will unexpected. to provent that when you call ensure_annotations
-                            decotator top of that function, it take only int inpults only(we 
-                            can mention any data type for function that type will consider from
-                            ensure annotation).
-                            however if input string, that throws an error.
-                            mention in exception as BoxValError exception to handle error.
-"""
 
 
 @ensure_annotations
@@ -35,9 +25,6 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
 
     Returns:
         ConfigBox: ConfigBox type
-        use of ConfigBox is, always yaml file returns output as dictionary
-        to access dictionary is difficult, so we can use configbox. using config box
-        we can call dictionaries like, d.key or d.val like this.
     """
     try:
         with open(path_to_yaml) as yaml_file:

@@ -1,9 +1,3 @@
-'''
-every cmponent we use logging function
-advance of creating logging inside package constructor file
-easily we can use the logging module
-'''
-
 import os
 import sys
 import logging
@@ -21,7 +15,6 @@ logging.basicConfig(
 
     handlers=[
         logging.FileHandler(log_filepath),
-        #this will print log terminal as well
         logging.StreamHandler(sys.stdout)
     ]
 )
